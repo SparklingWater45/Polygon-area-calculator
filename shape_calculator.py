@@ -5,7 +5,6 @@ class Rectangle:
         self.width = width
         self.height = height
 
-    
     def set_width(self,width):
         self.width = width
     
@@ -36,11 +35,6 @@ class Rectangle:
 
     def get_amount_inside(self,shape):
         
-        #If the input shape bigger than shape it's going inside
-
-        print('rectangle = '+ str(self.width + self.height))
-        print('square = ' + str(shape.width + shape.height))
-        
         if (self.width + self.height) < (shape.width + shape.height):
             return 0
         
@@ -48,8 +42,6 @@ class Rectangle:
 
     def __str__(self):
         return 'Rectangle(width={}, height={})'.format(self.width,self.height)
-
-
 
 class Square(Rectangle):
 
@@ -62,7 +54,6 @@ class Square(Rectangle):
     def set_side(self,length):
         return super().set_width(length),super().set_height(length)
  
-
     def set_width(self, length):
         return super().set_width(length),super().set_height(length)
     
@@ -74,6 +65,3 @@ class Square(Rectangle):
 
     def get_diagonal(self):
         return super().get_diagonal()
-
-    # def get_amount_inside(self, shape):
-    #     return super().get_amount_inside(shape)
